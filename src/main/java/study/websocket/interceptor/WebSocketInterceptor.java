@@ -23,6 +23,7 @@ public class WebSocketInterceptor implements ChannelInterceptor{
         if(StompCommand.CONNECT.equals(accessor.getCommand())){
             jwtUtil.validateAndExtract(accessor.getFirstNativeHeader("Authorization"));
         }
+
         return message;
     }
 }

@@ -1,10 +1,6 @@
 package study.websocket.filter;
 
-import com.allchat.allchat.config.auth.PrincipalDetails;
-import com.allchat.allchat.dto.CMRespDTO;
-import com.allchat.allchat.dto.login.LoginResDTO;
-import com.allchat.allchat.dto.user.UserDTO;
-import com.allchat.allchat.jwt.JwtUtil;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -15,6 +11,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.transaction.annotation.Transactional;
+import study.websocket.config.auth.PrincipalDetails;
+import study.websocket.dto.CMRespDTO;
+import study.websocket.dto.login.LoginResDTO;
+import study.websocket.dto.user.UserDTO;
+import study.websocket.jwt.JwtUtil;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

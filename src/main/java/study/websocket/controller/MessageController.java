@@ -19,7 +19,7 @@ public class MessageController {
     /**
      * 메세지 저장
      */
-    @MessageMapping("/chatrooms/{chat_room_id}")
+    @MessageMapping(value = "/chatrooms/{chat_room_id}/messages")
     public void saveChat(MessageDTO messageDTO){
 
         messageTemplate.convertAndSend("/app/chatrooms/" + messageDTO.getChatRoomId(), messageDTO);
